@@ -136,9 +136,41 @@ h3.hero-speech.bottom {
 
 .container-fluid.hero-scene {
   min-height: 80dvh;
+  padding: unset;
+  margin: unset;
 }
 
-img.hero-img {
+.hero-scene .row{
+  flex-grow: 1;
   position: relative;
-  right: -130px;
+}
+
+img.herobg-img {
+  position: relative;
+}
+
+img.hero-rectangle{
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 0;
+  opacity: .3;
+  top: -10px;
+  z-index: 1;
+}
+
+img.hero-img{
+  position: relative;
+  height: 675px;
+  bottom: 0;
+  right: -40%;
+  z-index: 2;
+}
+
+
+/*SEARCH FIELD SECTION*/
+
+section.search-field{
+  background-color: var(--clr-lightbrown);
+  height: 100dvh;
 }
