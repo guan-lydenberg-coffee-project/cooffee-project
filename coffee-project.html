@@ -6,8 +6,78 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<div class="page-wrapper">
 
+    <header class="container-fluid">
+        <div class="row">
+                <img class="headerBGimg" src="./img/coffee-cup.webp" alt="coffee-cup">
+                <img class="headerRectangle" src="./img/rectangle.png" alt="rectangle">
+            <div class="col-6 logoAndCo d-flex justify-content-start align-items-center gap-3 ">
+                <div class="logo">
+                    <img class="header-logo" src="./img/coffee-logo.jpeg" alt="coffee-logo">
+                </div>
+                <h3 class="header-h3">Early Roast Coffee Co.</h3>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <nav class="navbar navbar-dark navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler header-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end navtab-clr" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navLinks">
+                                    <li class="nav-item">
+                                        <a class="nav-link li-nav" aria-current="page" href="#">home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link li-nav" href="#">login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link li-nav" href="#">signup</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle li-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            socials
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item li-nav" href="#">facebook</a></li>
+                                            <li><a class="dropdown-item li-nav" href="#">instagram</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item li-nav" href="#">tiktok</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid hero-scene d-flex align-items-center">
+        <div class="row flex-grow-1">
+            <div class="col-6 d-flex flex-column gap-3">
+
+            </div>
+            <div class="col-6 d-flex flex-column gap-3">
+                <h3 class="hero-speech top">Early Roasts</h3>
+                <h1>Simple Mornings</h1>
+                <h3 class="hero-speech bottom">simply better</h3>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
