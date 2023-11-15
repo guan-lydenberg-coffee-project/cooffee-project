@@ -18,11 +18,15 @@
     --clr-goldenbrown: #E1931A;
     --clr-mainbrown: #B47636;
     --clr-darkbrown: #4E260C;
+    --clr-grayBrown: #54372B;
+
+    --clr-background: #221518;
 }
 .page-wrapper{
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+    background-color: var(--clr-background);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -69,8 +73,8 @@ img.headerRectangle{
     font-weight: 900;
     font-size: 35px;
     font-family: 'Edu TAS Beginner', cursive;
-    color: var(--clr-coffeebrown);
-    border-bottom: 2px solid var(--clr-mainbrown);
+    color: var(--clr-lightbrown);
+    border-bottom: 2px solid var(--clr-lightbrown);
 }
 
 button.header-nav{
@@ -79,8 +83,8 @@ button.header-nav{
 }
 
 .navtab-clr{
-    background-color: var(--clr-coffeebrown);
-    border-left: 2px solid var(--clr-darkbrown);
+    background-color: var(--clr-grayBrown);
+    border-left: 2px solid var(--clr-background);
 }
 
 ul.navLinks {
@@ -118,5 +122,11 @@ h3.hero-speech.top{
 
 h3.hero-speech.bottom{
     border-bottom: 2px solid var(--clr-mainbrown)
+}
+
+/*SEARCH FIELD SECTION*/
+
+.container-fluid.search-field{
+    min-height: 80dvh;
 }
 
