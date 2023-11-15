@@ -135,20 +135,45 @@ h3.hero-speech.bottom {
 .container-fluid.hero-scene {
   min-height: 80dvh;
   background-color: var(--clr-background);
+  padding: unset;
+  margin: unset;
 }
 
 .hero-scene .row {
   position: relative;
 }
 
-img.hero-img {
+.herobg-img{
   position: relative;
-  height: 650px;
-  right: -120px;
+}
+
+img.hero-rectangle{
+  position: relative;
+  height: 100dvh;
+  width: 30%;
+  right: -70%;
+  top: -10px;
+  opacity: .3;
+}
+
+img.hero-img {
+  position: absolute;
+  height: 100dvh;
+  padding: unset;
+  margin: unset;
+  right: 0;
+  bottom: -5px;
 }
 
 img.sliders {
   aspect-ratio: calc(3 / 2);
-  opacity: 0.8;
+  opacity: 0.6;
   border-radius: 99px;
+}
+
+/*SEARCH SECTION*/
+
+section.search-field{
+  min-height: 80dvh;
+  background-color: var(--clr-lightbrown);
 }
