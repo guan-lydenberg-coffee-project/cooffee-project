@@ -100,9 +100,9 @@ ul.dropdown-menu-dark{
 }
 
 
-/*HERO SCENE*/
+/*INTRO SCENE*/
 
-.container-fluid.hero-scene{
+.container-fluid.intro-scene{
     position: relative;
     color: var(--clr-lightbrown);
     min-height: 294px;
@@ -126,7 +126,12 @@ h3.hero-speech.bottom{
 
 /*SEARCH FIELD SECTION*/
 
-.container-fluid.search-field{
+.container-fluid.hero-scene{
     min-height: 80dvh;
+}
+
+img.hero-img{
+    position: relative;
+    right: -130px;
 }
 
