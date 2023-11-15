@@ -161,7 +161,7 @@ img.hero-rectangle{
 
 img.hero-img{
   position: relative;
-  height: 675px;
+  max-height: 675px;
   bottom: 0;
   right: -40%;
   z-index: 2;
