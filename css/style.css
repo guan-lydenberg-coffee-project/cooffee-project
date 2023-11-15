@@ -241,6 +241,10 @@ section.search-field {
 }
 
 .coffee-form {
+  background-color: var(--clr-lightbrown);
+  border: 5px solid var(--clr-darkbrown);
+  padding: 20px 20px 40px 20px;
+  border-radius: 20px;
   position: fixed;
   width: 600px;
   left: 30%;
@@ -251,6 +255,7 @@ section.search-field {
   align-items: center;
   &.display-form{
     z-index: 99;
+    box-shadow: 0px 0px 500px 500px var(--clr-coffeebrown);
   }
 }
 

@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="page-wrapper">
+
       <div class="d-flex addCoffeeDiv">
         <button
           class="addCoffee d-flex align-items-center justify-content-center"
@@ -20,6 +21,7 @@
           <p class="btnSymbol">+</p>
         </button>
       </div>
+
       <header class="container-fluid">
         <div class="row">
           <img
@@ -320,44 +322,44 @@
         </div>
       </section>
 
-      <div class="mb-3 bg-info d-flex flex-column gap-4 coffee-form">
+      <div class="mb-3 d-flex flex-column gap-4 coffee-form">
         <label for="" class="form-label"></label>
-        <input
+        <input required
           type="text"
           class="form-control"
           name="coffee-name"
           id="coffee-name"
           placeholder="Enter New Coffee Name"
         />
-        <input
+        <input required
           type="text"
           class="form-control"
           name="coffee-roast"
           id="coffee-roast"
           placeholder="Enter New Coffee Roast"
         />
-        <input
+        <input required
           type="text"
           class="form-control"
           name="coffee-desc"
           id="coffee-desc"
           placeholder="Enter New Coffee Description"
         />
-        <input
+        <input required
           type="number"
           class="form-control"
           name="coffee-price"
           id="coffee-price"
           placeholder="Enter New Coffee Price $"
         />
-        <input
+        <input required
           type="text"
           class="form-control"
           name="coffee-link"
           id="coffee-link"
           placeholder="Enter New Coffee Imgage Link"
         />
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary submitCoffee">Submit</button>
       </div>
 
     </div>
