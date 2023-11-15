@@ -162,17 +162,21 @@ img.hero-rectangle {
 img.hero-img {
   position: relative;
   max-height: 80vh;
+  width: 65vw;
   bottom: 0;
   right: -40%;
   z-index: 2;
 }
 
 .sliders {
-  width: 100%;
+  max-width: 100%;
   aspect-ratio: calc(3 / 2);
   opacity: 0.7;
   border-radius: 20px;
-  margin: 10vh 0;
+  margin: 5vh 0;
+}
+.carousel-caption {
+  margin-bottom: 20px;
 }
 
 /*SEARCH FIELD SECTION*/
@@ -180,4 +184,23 @@ img.hero-img {
 section.search-field {
   background-color: var(--clr-lightbrown);
   height: 100dvh;
+}
+
+.btn-Search {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--clr-grayBrown);
+  color: var(--clr-lightbrown);
+  font-size: 20px;
+  border: 2px solid var(--clr-darkbrown);
+  font-weight: 600;
+}
+.search-bar {
+  min-width: 45%;
+  height: 60px;
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: 30px;
+  font-weight: 800;
+  border-radius: 10px;
 }

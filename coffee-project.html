@@ -134,8 +134,16 @@
       <section class="container-fluid hero-scene">
         <div class="row">
           <div class="herobg-img">
-            <img class="hero-rectangle" src="./img/Rectangle-3.png" alt="bgRectangle">
-            <img class="hero-img" src="./img/Hero-Img.png" alt="coffeeMachine" />
+            <img
+              class="hero-rectangle"
+              src="./img/Rectangle-3.png"
+              alt="bgRectangle"
+            />
+            <img
+              class="hero-img"
+              src="./img/Hero-Img.png"
+              alt="coffeeMachine"
+            />
           </div>
           <div class="col-6 position-absolute mt-5 px-5">
             <div
@@ -170,7 +178,7 @@
                   <img
                     src="./img/slider1.jpeg"
                     class="d-block w-100 sliders"
-                    alt="..."
+                    alt="pic1"
                   />
                   <div class="carousel-caption d-none d-md-block">
                     <h5>How we get started</h5>
@@ -181,7 +189,7 @@
                   <img
                     src="./img//slider2.jpeg"
                     class="d-block w-100 sliders"
-                    alt="..."
+                    alt="pic2"
                   />
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Brewing</h5>
@@ -192,12 +200,11 @@
                   <img
                     src="./img/slider3.jpg"
                     class="d-block w-100 sliders"
-                    alt="..."
+                    alt="pic3"
                   />
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Fine Product</h5>
                     <p>Served with Passion and Love</p>
-                    <p>served with passion and love</p>
                   </div>
                 </div>
               </div>
@@ -235,13 +242,31 @@
         <div class="row">
           <div class="col-12">
             <!--                build search bar here-->
-          <div class="col-12 d-flex justify-content-center mt-4 gap-3 flex-column text-center">
-            <h3>Coffee Menu</h3>
-            <img src="" alt="">
-            <p>We're proud to present to you our quality coffee selections</p>
-          </div>
-          <div class="col-12">
-            <!--                build coffee cards here-->
+            <div
+              class="col-12 d-flex justify-content-center mt-4 gap-3 flex-column text-center"
+            >
+              <h3>Coffee Menu</h3>
+              <img src="#" alt="" />
+              <p>We're proud to present to you our quality coffee selections</p>
+            </div>
+            <div class="col-12 d-flex flex-column align-items-center gap-5">
+              <!--                build coffee cards here-->
+              <div class="search-options d-flex justify-content-center gap-3">
+                <button class="btn-Search">All</button>
+                <button class="btn-Search">Dark</button>
+                <button class="btn-Search">Medium</button>
+                <button class="btn-Search">Flavored</button>
+              </div>
+              <div class="d-flex justify-content-center search-bar">
+                <input
+                  class="d-flex flex-grow-1 p-2 search-input"
+                  type="text"
+                  placeholder="search"
+                  name="search"
+                  id="search"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -251,5 +276,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script src="js/coffee-project.js" type="module"></script>
   </body>
 </html>

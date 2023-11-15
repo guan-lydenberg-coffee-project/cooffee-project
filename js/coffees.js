@@ -1,0 +1,92 @@
+export const coffees = [
+  {
+    id: 1,
+    name: "French",
+    roast: "dark",
+    src: "./img/coffees/french.jpg",
+  },
+  {
+    id: 2,
+    name: "Verona",
+    roast: "dark",
+    src: "../img/coffees/ ",
+  },
+  {
+    id: 3,
+    name: "Sumatra",
+    roast: "dark",
+    src: "../img/coffees/ ",
+  },
+  {
+    id: 4,
+    name: "Vanilla",
+    roast: "flavored",
+    src: " ",
+  },
+  {
+    id: 5,
+    name: "Breakfast Blend",
+    roast: "medium",
+    src: " ",
+  },
+  {
+    id: 6,
+    name: "Caramel",
+    roast: "favored",
+    src: " ",
+  },
+  {
+    id: 7,
+    name: "Cinamon Dolce",
+    roast: "favored",
+    src: " ",
+  },
+  {
+    id: 8,
+    name: "Italian",
+    roast: "dark",
+    src: " ",
+  },
+  {
+    id: 9,
+    name: "Espresso",
+    roast: "dark",
+    src: " ",
+  },
+  {
+    id: 10,
+    name: "House Blend",
+    roast: "medium",
+    src: " ",
+  },
+  {
+    id: 11,
+    name: "Colombia",
+    roast: "medium",
+    src: " ",
+  },
+  {
+    id: 12,
+    name: "Maple Peachan",
+    roast: "flavored",
+    src: " ",
+  },
+  {
+    id: 13,
+    name: "Morning Joe",
+    roast: "dark",
+    src: " ",
+  },
+  {
+    id: 14,
+    name: "Mocha",
+    roast: "flavored",
+    src: " ",
+  },
+  {
+    id: 15,
+    name: "Pike Place",
+    roast: "medium",
+    src: " ",
+  },
+];
