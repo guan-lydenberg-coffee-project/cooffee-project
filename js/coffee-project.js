@@ -39,7 +39,31 @@ const handleSubmitBtn = () => {
 
 // Create new coffee card to HTML!!!
 
+const renderCoffeeCard = (coffee) =>{
+    const coffeeCard = document.createElement(`div`);
+    coffeeCard.classList.add(`coffeeCard`, `d-flex`);
+    coffeeCard.setAttribute(`id`, `${coffee.id}`);
+
+    coffeeCard.innerHTML = `
+    <img class="coffee-img" src="${coffee.src}" alt="" />
+                <div class="d-flex flex-column coffee-info">
+                  <h3>${coffee.name}</h3>
+                  <p>$${coffee.price}</p>
+                  <p>${coffee.roast}</p>
+                  <p>${coffee.desc}</p>
+                </div>
+    `;
+    const coffeeParent = document.querySelector(`.coffeeCardParent`)
+    coffeeParent.appendChild(coffeeCard);
+}
+
+
+
 (() => {
   handleNewCoffeeBtn();
   handleSubmitBtn();
+  for (let coffee of coffees){
+    renderCoffeeCard(coffee);
+  }
+  renderCoffeeCard()
 })();
