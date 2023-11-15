@@ -204,3 +204,16 @@ section.search-field {
   font-weight: 800;
   border-radius: 10px;
 }
+.coffeeCard {
+  position: relative;
+  width: 30vw;
+}
+
+.coffee-img {
+  width: 300px;
+}
+.coffee-info {
+  position: absolute;
+  left: 250px;
+  top: 30px;
+}
