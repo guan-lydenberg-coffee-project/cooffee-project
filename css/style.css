@@ -233,21 +233,27 @@ section.search-field {
 .coffee-img {
   width: 380px;
 }
+
 .coffee-info {
   position: absolute;
   left: 280px;
   top: 80px;
 }
+
 .coffee-form {
   position: fixed;
   width: 600px;
-  left: 35%;
-  top: 35%;
+  left: 30%;
+  top: 25%;
   z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  &.display-form{
+    z-index: 99;
+  }
 }
+
 .form-control {
   width: 300px;
 }
