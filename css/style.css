@@ -71,6 +71,9 @@ ul {
 
 /*HEADER SECTION*/
 
+header.container-fluid{
+  position: relative;
+}
 header.row {
   position: relative;
   padding: 0;
@@ -156,7 +159,8 @@ h3.hero-speech.bottom {
 /*HERO SCENE SECTION*/
 
 .container-fluid.hero-scene {
-  min-height: 80dvh;
+  position: relative;
+  height: 80dvh;
   padding: unset;
   margin: unset;
 }
@@ -172,8 +176,8 @@ img.herobg-img {
 
 img.hero-rectangle {
   position: absolute;
-  width: 30%;
-  height: 100%;
+  width: 27vw;
+  height: 80dvh;
   right: 0;
   opacity: 0.3;
   top: -10px;
@@ -182,9 +186,9 @@ img.hero-rectangle {
 
 img.hero-img {
   position: relative;
-  max-height: 80vh;
-  width: 65vw;
-  bottom: 0;
+  min-height: 80dvh;
+  width: 65dvw;
+  bottom: 4%;
   right: -40%;
   z-index: 2;
 }
