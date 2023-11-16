@@ -39,12 +39,12 @@ const handleSubmitBtn = () => {
 
 // Create new coffee card to HTML!!!
 
-const renderCoffeeCard = (coffee) =>{
-    const coffeeCard = document.createElement(`div`);
-    coffeeCard.classList.add(`coffeeCard`, `d-flex`);
-    coffeeCard.setAttribute(`id`, `${coffee.id}`);
+const renderCoffeeCard = (coffee) => {
+  const coffeeCard = document.createElement(`div`);
+  coffeeCard.classList.add(`coffeeCard`, `d-flex`);
+  coffeeCard.setAttribute(`id`, `${coffee.id}`);
 
-    coffeeCard.innerHTML = `
+  coffeeCard.innerHTML = `
     <img class="coffee-img" src="${coffee.src}" alt="" />
                 <div class="d-flex flex-column coffee-info">
                   <h3>${coffee.name}</h3>
@@ -53,60 +53,51 @@ const renderCoffeeCard = (coffee) =>{
                   <p>${coffee.desc}</p>
                 </div>
     `;
-    const coffeeParent = document.querySelector(`.coffeeCardParent`)
-    coffeeParent.appendChild(coffeeCard);
-}
+  const coffeeParent = document.querySelector(`.coffeeCardParent`);
+  coffeeParent.appendChild(coffeeCard);
+};
 
-const updateCoffeesByClicking = (coffees)=>{
+const renderCoffeeCards = (coffees) => {
+  coffees.forEach((coffee) => {
+    renderCoffeeCard(coffee);
+  });
+};
 
+const updateCoffeesByClicking = (coffees) => {
   // update Coffees with buttons clicked
   const filterBtns = document.querySelectorAll(".btn-Search");
-  let filteredCoffees =[];
-  
-  filterBtns.forEach((filterBtn)=>{
-    
-  filterBtn.addEventListener("click", (e)=>{
-      if (e.target.innerText.toLowerCase() ==="all"){
+  let filteredCoffees = [];
+
+  filterBtns.forEach((filterBtn) => {
+    filterBtn.addEventListener("click", (e) => {
+      if (e.target.innerText.toLowerCase() === "all") {
         filteredCoffees = coffees;
-      } 
-      else{
+      } else {
         filteredCoffees = [];
-        coffees.forEach((coffee)=>{
-          if (coffee.roast.toLowerCase() === e.target.innerText.toLowerCase()){
+        coffees.forEach((coffee) => {
+          if (coffee.roast.toLowerCase() === e.target.innerText.toLowerCase()) {
             filteredCoffees.push(coffee);
           }
         });
-       
       }
-       return filteredCoffees;
+      renderCoffeeCards(filteredCoffees);
+    });
   });
-  });
-  console.log(filteredCoffees.length);
-}
+};
 
-const updateCoffeesByTyping = (coffees)=>{
-  let updatedCoffeesByTyping = [];
-  const searchInput = document.querySelector(".search-input");
-  searchInput.addEventListener("input", (e)=>{
-  // let searchValue = searchInput.value.trim().toLowerCase();
-    // updatedCoffeesByClicking.forEach((coffee)=>{
-    //   if (coffee.name.toLowerCase().includes(searchValue)){
-    //     updateCoffeesByTyping.push(coffee.name);
-    //   }
-    // })
-    console.log(coffees);
-
-
-    return updatedCoffeesByTyping;
-  } );
-
-
-
-  
-
-
-}
-
+// const updateCoffeesByTyping = (coffees) => {
+//   let updatedCoffeesByTyping = [];
+//   const searchInput = document.querySelector(".search-input");
+//   searchInput.addEventListener("input", (e) => {
+//     // let searchValue = searchInput.value.trim().toLowerCase();
+//     // updatedCoffeesByClicking.forEach((coffee)=>{
+//     //   if (coffee.name.toLowerCase().includes(searchValue)){
+//     //     updateCoffeesByTyping.push(coffee.name);
+//     //   }
+//     // })
+//     console.log(coffees);
+//   });
+// };
 
 (() => {
   // handleNewCoffeeBtn();
@@ -114,8 +105,6 @@ const updateCoffeesByTyping = (coffees)=>{
   // for (let coffee of coffees){
   //   renderCoffeeCard(coffee);
   // }
-
-
 
   // Implment search buttons functionality
   // const searchBtns = document.querySelectorAll('.btn-Search');
@@ -127,13 +116,5 @@ const updateCoffeesByTyping = (coffees)=>{
 
   // updateCoffeesByClicking(coffees);
 
-  let updatedCoffees = updateCoffeesByClicking(coffees);
-
-  console.log(updatedCoffees);
-
-
-
-
-
-
+  updateCoffeesByClicking(coffees);
 })();
