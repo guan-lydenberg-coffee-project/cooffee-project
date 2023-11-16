@@ -243,13 +243,14 @@ section.search-field {
 
 .coffee-form {
   background-color: var(--clr-lightbrown);
-  border: 5px solid var(--clr-mainbrown);
+  border: 5px solid var(--clr-darkbrown);
+  box-shadow: 5px 10px 30px 10px var(--clr-grayBrown);
   padding: 20px 20px 40px 20px;
   border-radius: 20px;
   position: fixed;
   width: 600px;
-  left: 30%;
-  top: 25%;
+  left: 25%;
+  top: 10%;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -260,5 +261,48 @@ section.search-field {
 }
 
 .form-control {
-  width: 300px;
+  width: 400px;
+  border: 3px solid var(--clr-mainbrown);
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+}
+
+.form-control::placeholder{
+  color: var(--clr-darkbrown);
+}
+
+img.formLogo{
+  border-radius: 999px;
+  width: 50px;
+}
+
+button.submitCoffee{
+  background-color: var(--clr-grayBrown);
+  border: 3px solid var(--clr-background);
+  padding: 5px 30px;
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+  color: var(--clr-lightbrown);
+  font-size: 20px;
+}
+
+button.submitCoffee:hover{
+  background-color: var(--clr-mainbrown);
+}
+
+button.closeForm{
+  position: absolute;
+  font-size: 20px;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: var(--clr-grayBrown);
+  border-radius: 999px;
+  right: 30px;
+  top: 30px;
+  color: var(--clr-lightbrown);
+  border: 3px solid var(--clr-background);
+}
+
+button.closeForm:hover{
+  background-color: var(--clr-mainbrown);
 }
