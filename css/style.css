@@ -71,7 +71,7 @@ ul {
 
 /*HEADER SECTION*/
 
-header.container-fluid{
+header.container-fluid {
   position: relative;
 }
 header.row {
@@ -208,7 +208,7 @@ section.search-field {
   padding-bottom: 50px;
 }
 
-.btn-Search {
+label.btn-Search {
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -217,6 +217,16 @@ section.search-field {
   font-size: 20px;
   border: 2px solid var(--clr-darkbrown);
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:has(input:checked) {
+    background-color: var(--clr-lightbrown);
+    color: var(--clr-grayBrown);
+  }
+  & input {
+    display: none;
+  }
 }
 .search-bar {
   min-width: 45%;
@@ -234,7 +244,6 @@ section.search-field {
 .coffee-img {
   width: 380px;
 }
-
 
 .coffee-info {
   position: absolute;
@@ -256,7 +265,7 @@ section.search-field {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &.display-form{
+  &.display-form {
     z-index: 99;
   }
 }
@@ -264,34 +273,34 @@ section.search-field {
 .form-control {
   width: 400px;
   border: 3px solid var(--clr-mainbrown);
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
 }
 
-.form-control::placeholder{
+.form-control::placeholder {
   color: var(--clr-darkbrown);
 }
 
-img.formLogo{
+img.formLogo {
   border-radius: 999px;
   width: 50px;
 }
 
-button.submitCoffee{
+button.submitCoffee {
   background-color: var(--clr-grayBrown);
   border: 3px solid var(--clr-background);
   padding: 5px 30px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
   color: var(--clr-lightbrown);
   font-size: 20px;
 }
 
-button.submitCoffee:hover{
+button.submitCoffee:hover {
   background-color: var(--clr-mainbrown);
 }
 
-button.closeForm{
+button.closeForm {
   position: absolute;
   font-size: 20px;
   width: 50px;
@@ -304,6 +313,6 @@ button.closeForm{
   border: 3px solid var(--clr-background);
 }
 
-button.closeForm:hover{
+button.closeForm:hover {
   background-color: var(--clr-mainbrown);
 }

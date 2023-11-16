@@ -26,12 +26,11 @@ const createCoffee = () => {
   coffee.src = coffeeLink.value;
 
   coffees.push(coffee);
-  console.log(coffee);
+  console.log(coffees);
 };
 
 const handleSubmitBtn = () => {
   const submitCoffeeBtn = document.querySelector(`.submitCoffee`);
-
   submitCoffeeBtn.addEventListener("click", (e) => {
     createCoffee();
   });
@@ -64,58 +63,43 @@ const renderCoffeeCards = (coffees) => {
   });
 };
 
-const updateCoffeesByClicking = (coffees) => {
-  // update Coffees with buttons clicked
-  const filterBtns = document.querySelectorAll(".btn-Search");
-  filterBtns.forEach((filterBtn) => {
-    filterBtn.addEventListener("click", (e) => {
-      console.log(e.target.innerText);
-      let filteredCoffees = [];
-      if (e.target.innerText.toLowerCase() === "all") {
-        filteredCoffees = coffees;
-      } else {
-        filteredCoffees = [];
-        coffees.forEach((coffee) => {
-          if (coffee.roast.toLowerCase() === e.target.innerText.toLowerCase()) {
-            filteredCoffees.push(coffee);
-          }
-        });
-      }
-      renderCoffeeCards(filteredCoffees);
-    });
-  });
-};
+const updateCoffees = (coffees) => {
+  let filteredCoffees = coffees;
+  const roastValue = document.querySelector(
+    `input[name="roast"]:checked`
+  ).value;
 
-const updateCoffeesByTyping = (coffees) => {
-  let updatedCoffeesByTyping = [];
-  const searchInput = document.querySelector(".search-input");
-  searchInput.addEventListener("input", (e) => {
-    let searchValue = searchInput.value.trim().toLowerCase();
-    coffees.forEach((coffee) => {
-      if (coffee.name.toLowerCase().includes(searchValue)) {
-        updatedCoffeesByTyping.push(coffee.name);
+  const searchValue = document.querySelector(`#search`).value;
+  filteredCoffees = filteredCoffees
+    .filter((coffee) => {
+      if (roastValue === "all") {
+        return true;
       }
+      return coffee.roast.toLowerCase() === roastValue.toLowerCase();
+    })
+    .filter((coffee) => {
+      if (!searchValue) {
+        return true;
+      }
+      return coffee.name.toLowerCase().includes(searchValue.toLowerCase());
     });
-    console.log(updatedCoffeesByTyping);
-  });
+
+  renderCoffeeCards(filteredCoffees);
 };
 
 (() => {
   handleNewCoffeeBtn();
   handleSubmitBtn();
-  // for (let coffee of coffees){
-  //   renderCoffeeCard(coffee);
-  // }
 
-  // Implment search buttons functionality
-  // const searchBtns = document.querySelectorAll('.btn-Search');
-  // searchBtns.forEach((btn)=>{
-  //   btn.addEventListener('click', ()=>{
-  //     console.log(handleCoffeeFilter(coffees, btn));
-  //   })
-  // })
+  const roastInputs = document.querySelectorAll('input[name="roast"]');
+  roastInputs.forEach((roast) => {
+    roast.addEventListener("change", () => {
+      updateCoffees(coffees);
+    });
+  });
 
-  // updateCoffeesByClicking(coffees);
-
-  updateCoffeesByClicking(coffees);
+  const searchInput = document.querySelector("#search");
+  searchInput.addEventListener("input", () => {
+    updateCoffees(coffees);
+  });
 })();

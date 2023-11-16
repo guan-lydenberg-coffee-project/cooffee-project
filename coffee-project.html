@@ -142,17 +142,13 @@
 
       <section class="container-fluid hero-scene">
         <div class="row">
-            <img
-              class="hero-rectangle"
-              src="./img/Rectangle-3.png"
-              alt="bgRectangle"
-            />
-            <img
-              class="hero-img"
-              src="./img/Hero-Img.png"
-              alt="coffeeMachine"
-            />
-          <div class="col-6 position-absolute mt-5 px-5" style="z-index: 2;">
+          <img
+            class="hero-rectangle"
+            src="./img/Rectangle-3.png"
+            alt="bgRectangle"
+          />
+          <img class="hero-img" src="./img/Hero-Img.png" alt="coffeeMachine" />
+          <div class="col-6 position-absolute mt-5 px-5" style="z-index: 2">
             <div
               id="carouselExampleCaptions"
               class="carousel slide"
@@ -258,13 +254,26 @@
             </div>
             <div class="col-12 d-flex flex-column align-items-center gap-5">
               <div class="search-options d-flex justify-content-center gap-3">
-                <button class="btn-Search">All</button>
-                <button class="btn-Search">Dark</button>
-                <button class="btn-Search">Medium</button>
-                <button class="btn-Search">Flavored</button>
+                <label class="btn-Search">
+                  <input type="radio" name="roast" value="all" />
+                  All
+                </label>
+                <label class="btn-Search">
+                  <input type="radio" name="roast" value="dark" />
+                  Dark
+                </label>
+                <label class="btn-Search">
+                  <input type="radio" name="roast" value="medium" />
+                  Medium
+                </label>
+                <label class="btn-Search">
+                  <input type="radio" name="roast" value="flavored" />
+                  Flavored
+                </label>
               </div>
               <label class="d-flex justify-content-center search-bar">
-                <input required
+                <input
+                  required
                   class="d-flex flex-grow-1 p-2 search-input"
                   type="text"
                   placeholder="search"
@@ -274,7 +283,9 @@
               </label>
             </div>
             <!--                build coffee cards here-->
-            <div class="col-12 coffeeCardParent d-flex flex-wrap mt-5 justify-content-start">
+            <div
+              class="col-12 coffeeCardParent d-flex flex-wrap mt-5 justify-content-start"
+            >
               <div class="coffeeCard d-flex" id="coffee-1">
                 <img class="coffee-img" src="./img/coffees/french.jpg" alt="" />
                 <div class="d-flex flex-column coffee-info">
@@ -290,55 +301,52 @@
         </div>
       </section>
 
-      <div class="mb-3 d-flex flex-column gap-4 coffee-form">
-        <button class="btn closeForm">
-          X
-        </button>
-        <label for="" class="form-label"></label>
-        <img src="./img/coffee-logo.jpeg" alt="shop-logo" class="formLogo">
-        <input
-          required
-          type="text"
-          class="form-control"
-          name="coffee-name"
-          id="coffee-name"
-          placeholder="Enter New Coffee Name"
-        />
-        <input
-          required
-          type="text"
-          class="form-control"
-          name="coffee-roast"
-          id="coffee-roast"
-          placeholder="Enter New Coffee Roast"
-        />
-        <input
-          required
-          type="text"
-          class="form-control"
-          name="coffee-desc"
-          id="coffee-desc"
-          placeholder="Enter New Coffee Description"
-        />
-        <input
-          required
-          type="number"
-          class="form-control"
-          name="coffee-price"
-          id="coffee-price"
-          placeholder="Enter New Coffee Price $"
-        />
-        <input
-          required
-          type="text"
-          class="form-control"
-          name="coffee-link"
-          id="coffee-link"
-          placeholder="Enter New Coffee Imgage Link"
-        />
-        <button type="submit" class="btn submitCoffee">
-          Submit
-        </button>
+      <div class="mb-3 coffee-form">
+        <button class="btn closeForm">X</button>
+        <label for="" class="form-label d-flex flex-column gap-4">
+          <img src="./img/coffee-logo.jpeg" alt="shop-logo" class="formLogo" />
+          <input
+            required
+            type="text"
+            class="form-control"
+            name="coffee-name"
+            id="coffee-name"
+            placeholder="Enter New Coffee Name"
+          />
+          <input
+            required
+            type="text"
+            class="form-control"
+            name="coffee-roast"
+            id="coffee-roast"
+            placeholder="Enter New Coffee Roast"
+          />
+          <input
+            required
+            type="text"
+            class="form-control"
+            name="coffee-desc"
+            id="coffee-desc"
+            placeholder="Enter New Coffee Description"
+          />
+          <input
+            required
+            type="number"
+            class="form-control"
+            name="coffee-price"
+            id="coffee-price"
+            placeholder="Enter New Coffee Price $"
+          />
+          <input
+            required
+            type="text"
+            class="form-control"
+            name="coffee-link"
+            id="coffee-link"
+            placeholder="Enter New Coffee Imgage Link"
+          />
+        </label>
+        <button type="submit" class="btn submitCoffee">Submit</button>
       </div>
     </div>
     <script
