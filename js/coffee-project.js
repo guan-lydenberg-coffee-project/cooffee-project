@@ -87,6 +87,8 @@ const updateCoffees = (coffees) => {
   renderCoffeeCards(filteredCoffees);
 };
 
+
+
 (() => {
   handleNewCoffeeBtn();
   handleSubmitBtn();
