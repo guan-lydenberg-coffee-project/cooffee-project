@@ -12,27 +12,40 @@ const handleNewCoffeeBtn = () => {
 
 const createCoffee = () => {
   let coffee = {};
+  let enableCreate = false;
 
-  coffee.id = coffees.length + 1;
-  const coffeeName = document.querySelector(`#coffee-name`);
-  coffee.name = coffeeName.value;
-  const coffeeRoast = document.querySelector(`#coffee-roast`);
-  coffee.roast = coffeeRoast.value;
-  const coffeeDesc = document.querySelector(`#coffee-desc`);
-  coffee.desc = coffeeDesc.value;
-  const coffeePrice = document.querySelector(`#coffee-price`);
-  coffee.price = coffeePrice.value;
-  const coffeeLink = document.querySelector(`#coffee-link`);
-  coffee.src = coffeeLink.value;
+  const inputs = document.querySelectorAll(`.form-control`);
+  inputs.forEach((input) => {
+    if (!input.value) {
+      alert(`${input["placeholder"]}`);
+    } else {
+      enableCreate = true;
+    }
+  });
 
-  coffees.push(coffee);
-  console.log(coffees);
+  if (enableCreate) {
+    coffee.id = coffees.length + 1;
+    const coffeeName = document.querySelector(`#coffee-name`);
+    coffee.name = coffeeName.value;
+    const coffeeRoast = document.querySelector(`#coffee-roast`);
+    coffee.roast = coffeeRoast.value;
+    const coffeeDesc = document.querySelector(`#coffee-desc`);
+    coffee.desc = coffeeDesc.value;
+    const coffeePrice = document.querySelector(`#coffee-price`);
+    coffee.price = coffeePrice.value;
+    const coffeeLink = document.querySelector(`#coffee-link`);
+    coffee.src = coffeeLink.value;
+    coffees.push(coffee);
+    renderCoffeeCard(coffee);
+  }
 };
 
 const handleSubmitBtn = () => {
   const submitCoffeeBtn = document.querySelector(`.submitCoffee`);
   submitCoffeeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     createCoffee();
+    document.querySelector(`#coffee-form`).reset();
   });
 };
 
@@ -86,8 +99,6 @@ const updateCoffees = (coffees) => {
 
   renderCoffeeCards(filteredCoffees);
 };
-
-
 
 (() => {
   handleNewCoffeeBtn();

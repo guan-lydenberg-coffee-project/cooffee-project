@@ -306,60 +306,61 @@
 
       <div class="mb-3 coffee-form">
         <button class="btn closeForm">X</button>
-        <div id="form"></div>
-        <label
-          for=""
-          class="form-label d-flex flex-column gap-4 align-items-center"
-        >
-          <div class="formLogoDiv mb-4">
-            <img
-              src="./img/coffee-logo.jpeg"
-              alt="shop-logo"
-              class="formLogo mt-2 mb-1"
+        <form id="coffee-form">
+          <label
+            for=""
+            class="form-label d-flex flex-column gap-4 align-items-center"
+          >
+            <div class="formLogoDiv mb-4">
+              <img
+                src="./img/coffee-logo.jpeg"
+                alt="shop-logo"
+                class="formLogo mt-2 mb-1"
+              />
+            </div>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="coffee-name"
+              id="coffee-name"
+              placeholder="Enter New Coffee Name"
             />
-          </div>
-          <input
-            required
-            type="text"
-            class="form-control"
-            name="coffee-name"
-            id="coffee-name"
-            placeholder="Enter New Coffee Name"
-          />
-          <input
-            required
-            type="text"
-            class="form-control"
-            name="coffee-roast"
-            id="coffee-roast"
-            placeholder="Enter New Coffee Roast"
-          />
-          <input
-            required
-            type="text"
-            class="form-control"
-            name="coffee-desc"
-            id="coffee-desc"
-            placeholder="Enter New Coffee Description"
-          />
-          <input
-            required
-            type="number"
-            class="form-control"
-            name="coffee-price"
-            id="coffee-price"
-            placeholder="Enter New Coffee Price $"
-          />
-          <input
-            required
-            type="text"
-            class="form-control"
-            name="coffee-link"
-            id="coffee-link"
-            placeholder="Enter New Coffee Imgage Link"
-          />
-        </label>
-        <button type="submit" class="btn submitCoffee mt-5">Submit</button>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="coffee-roast"
+              id="coffee-roast"
+              placeholder="Enter New Coffee Roast"
+            />
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="coffee-desc"
+              id="coffee-desc"
+              placeholder="Enter New Coffee Description"
+            />
+            <input
+              required
+              type="number"
+              class="form-control"
+              name="coffee-price"
+              id="coffee-price"
+              placeholder="Enter New Coffee Price $"
+            />
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="coffee-link"
+              id="coffee-link"
+              placeholder="Enter New Coffee Imgage Link"
+            />
+          </label>
+          <button type="submit" class="btn submitCoffee mt-5">Submit</button>
+        </form>
       </div>
     </div>
     <script

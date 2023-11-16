@@ -34,7 +34,7 @@ layer(framework);
   overflow-x: hidden;
 }
 
-a:link{
+a:link {
   text-decoration: none;
 }
 
@@ -53,8 +53,6 @@ button.addCoffee {
   margin: unset;
   opacity: 0.7;
 }
-
-
 
 p.btnSymbol {
   padding: unset;
@@ -249,6 +247,7 @@ label.btn-Search {
 
 .coffee-img {
   width: 380px;
+  height: 320px;
 }
 
 .coffee-info {
@@ -287,7 +286,7 @@ label.btn-Search {
   color: var(--clr-darkbrown);
 }
 
-.formLogoDiv{
+.formLogoDiv {
   border-bottom: 3px solid var(--clr-grayBrown);
 }
 
@@ -327,10 +326,9 @@ button.closeForm:hover {
   background-color: var(--clr-mainbrown);
 }
 
-
 /*FOOTER SECTION*/
 
-footer.container-fluid{
+footer.container-fluid {
   position: relative;
   height: 30dvh;
   background-image: url(../img/footer-coffee-img.jpeg);
@@ -338,23 +336,22 @@ footer.container-fluid{
   background-position: center;
 }
 
-.footerUl{
+.footerUl {
   padding: unset;
   margin: unset;
   list-style: none;
 }
 
-.footerUl li{
-  font-family: 'Kalam', cursive;
+.footerUl li {
+  font-family: "Kalam", cursive;
   font-size: 20px;
 }
 
-.footerUl li a{
+.footerUl li a {
   color: var(--clr-lightbrown);
   text-decoration: underline;
 }
 
-
-.footerNav{
+.footerNav {
   flex-grow: 1;
 }
