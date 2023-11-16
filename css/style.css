@@ -75,7 +75,7 @@ header.container-fluid{
   position: relative;
 }
 header.row {
-  position: relative;
+  /*position: relative;*/
   padding: 0;
   margin: 0;
 }
@@ -83,12 +83,13 @@ img.headerBGimg {
   position: absolute;
   padding: unset;
   margin: unset;
-  height: 352px;
+  height: 363px;
+  z-index: 0;
 }
 img.headerRectangle {
   width: 100%;
   position: absolute;
-  height: 352px;
+  height: 363px;
   padding: unset;
 }
 
@@ -167,29 +168,24 @@ h3.hero-speech.bottom {
 
 .hero-scene .row {
   flex-grow: 1;
-  position: relative;
-}
-
-img.herobg-img {
-  position: relative;
 }
 
 img.hero-rectangle {
   position: absolute;
+  height: 100%;
   width: 27vw;
-  height: 80dvh;
-  right: 0;
+  right: -20px;
+  bottom: 0;
   opacity: 0.3;
-  top: -10px;
-  z-index: 1;
+  z-index: 0;
 }
 
 img.hero-img {
-  position: relative;
-  min-height: 80dvh;
-  width: 65dvw;
-  bottom: 4%;
-  right: -40%;
+  position: absolute;
+  height: 80vh;
+  width: 60vw;
+  bottom: 0;
+  right: -10px;
   z-index: 2;
 }
 
@@ -238,6 +234,7 @@ section.search-field {
   width: 380px;
 }
 
+
 .coffee-info {
   position: absolute;
   left: 280px;
@@ -246,7 +243,7 @@ section.search-field {
 
 .coffee-form {
   background-color: var(--clr-lightbrown);
-  border: 5px solid var(--clr-darkbrown);
+  border: 5px solid var(--clr-mainbrown);
   padding: 20px 20px 40px 20px;
   border-radius: 20px;
   position: fixed;
@@ -259,7 +256,6 @@ section.search-field {
   align-items: center;
   &.display-form{
     z-index: 99;
-    box-shadow: 0px 0px 500px 500px var(--clr-coffeebrown);
   }
 }
 

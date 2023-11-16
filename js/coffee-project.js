@@ -101,8 +101,8 @@ const updateCoffeesByTyping = (coffees) => {
 };
 
 (() => {
-  // handleNewCoffeeBtn();
-  // handleSubmitBtn();
+  handleNewCoffeeBtn();
+  handleSubmitBtn();
   // for (let coffee of coffees){
   //   renderCoffeeCard(coffee);
   // }
