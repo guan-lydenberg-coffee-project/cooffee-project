@@ -57,13 +57,83 @@ const renderCoffeeCard = (coffee) =>{
     coffeeParent.appendChild(coffeeCard);
 }
 
+const updateCoffeesByClicking = (coffees)=>{
+
+  // update Coffees with buttons clicked
+  const filterBtns = document.querySelectorAll(".btn-Search");
+  let filteredCoffees =[];
+  
+  filterBtns.forEach((filterBtn)=>{
+    
+  filterBtn.addEventListener("click", (e)=>{
+      if (e.target.innerText.toLowerCase() ==="all"){
+        filteredCoffees = coffees;
+      } 
+      else{
+        filteredCoffees = [];
+        coffees.forEach((coffee)=>{
+          if (coffee.roast.toLowerCase() === e.target.innerText.toLowerCase()){
+            filteredCoffees.push(coffee);
+          }
+        });
+       
+      }
+       return filteredCoffees;
+  });
+  });
+  console.log(filteredCoffees.length);
+}
+
+const updateCoffeesByTyping = (coffees)=>{
+  let updatedCoffeesByTyping = [];
+  const searchInput = document.querySelector(".search-input");
+  searchInput.addEventListener("input", (e)=>{
+  // let searchValue = searchInput.value.trim().toLowerCase();
+    // updatedCoffeesByClicking.forEach((coffee)=>{
+    //   if (coffee.name.toLowerCase().includes(searchValue)){
+    //     updateCoffeesByTyping.push(coffee.name);
+    //   }
+    // })
+    console.log(coffees);
+
+
+    return updatedCoffeesByTyping;
+  } );
+
+
+
+  
+
+
+}
 
 
 (() => {
-  handleNewCoffeeBtn();
-  handleSubmitBtn();
-  for (let coffee of coffees){
-    renderCoffeeCard(coffee);
-  }
-  renderCoffeeCard()
+  // handleNewCoffeeBtn();
+  // handleSubmitBtn();
+  // for (let coffee of coffees){
+  //   renderCoffeeCard(coffee);
+  // }
+
+
+
+  // Implment search buttons functionality
+  // const searchBtns = document.querySelectorAll('.btn-Search');
+  // searchBtns.forEach((btn)=>{
+  //   btn.addEventListener('click', ()=>{
+  //     console.log(handleCoffeeFilter(coffees, btn));
+  //   })
+  // })
+
+  // updateCoffeesByClicking(coffees);
+
+  let updatedCoffees = updateCoffeesByClicking(coffees);
+
+  console.log(updatedCoffees);
+
+
+
+
+
+
 })();
