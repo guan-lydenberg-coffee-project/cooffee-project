@@ -58,6 +58,7 @@ const renderCoffeeCard = (coffee) => {
 };
 
 const renderCoffeeCards = (coffees) => {
+  document.querySelector(`.coffeeCardParent`).innerHTML = " ";
   coffees.forEach((coffee) => {
     renderCoffeeCard(coffee);
   });
@@ -66,10 +67,10 @@ const renderCoffeeCards = (coffees) => {
 const updateCoffeesByClicking = (coffees) => {
   // update Coffees with buttons clicked
   const filterBtns = document.querySelectorAll(".btn-Search");
-  let filteredCoffees = [];
-
   filterBtns.forEach((filterBtn) => {
     filterBtn.addEventListener("click", (e) => {
+      console.log(e.target.innerText);
+      let filteredCoffees = [];
       if (e.target.innerText.toLowerCase() === "all") {
         filteredCoffees = coffees;
       } else {
@@ -85,19 +86,19 @@ const updateCoffeesByClicking = (coffees) => {
   });
 };
 
-// const updateCoffeesByTyping = (coffees) => {
-//   let updatedCoffeesByTyping = [];
-//   const searchInput = document.querySelector(".search-input");
-//   searchInput.addEventListener("input", (e) => {
-//     // let searchValue = searchInput.value.trim().toLowerCase();
-//     // updatedCoffeesByClicking.forEach((coffee)=>{
-//     //   if (coffee.name.toLowerCase().includes(searchValue)){
-//     //     updateCoffeesByTyping.push(coffee.name);
-//     //   }
-//     // })
-//     console.log(coffees);
-//   });
-// };
+const updateCoffeesByTyping = (coffees) => {
+  let updatedCoffeesByTyping = [];
+  const searchInput = document.querySelector(".search-input");
+  searchInput.addEventListener("input", (e) => {
+    let searchValue = searchInput.value.trim().toLowerCase();
+    coffees.forEach((coffee) => {
+      if (coffee.name.toLowerCase().includes(searchValue)) {
+        updatedCoffeesByTyping.push(coffee.name);
+      }
+    });
+    console.log(updatedCoffeesByTyping);
+  });
+};
 
 (() => {
   // handleNewCoffeeBtn();
