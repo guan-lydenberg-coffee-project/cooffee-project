@@ -281,6 +281,10 @@ label.btn-Search {
   color: var(--clr-darkbrown);
 }
 
+.formLogoDiv{
+  border-bottom: 3px solid var(--clr-grayBrown);
+}
+
 img.formLogo {
   border-radius: 999px;
   width: 50px;
