@@ -205,6 +205,7 @@ img.hero-img {
 section.search-field {
   background-color: var(--clr-lightbrown);
   height: 100%;
+  padding-bottom: 50px;
 }
 
 .btn-Search {
