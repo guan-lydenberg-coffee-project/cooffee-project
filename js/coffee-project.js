@@ -10,6 +10,15 @@ const handleNewCoffeeBtn = () => {
   });
 };
 
+const handleCloseFormBtn = () =>{
+  const closeFormBtn = document.querySelector(`#closeFormBtn`);
+  const coffeeForm = document.querySelector(`.coffee-form`);
+
+  closeFormBtn.addEventListener(`click`, e=>{
+    coffeeForm.classList.remove(`display-form`);
+  });
+}
+
 const createCoffee = () => {
   let coffee = {};
   let enableCreate = false;
@@ -103,6 +112,8 @@ const updateCoffees = (coffees) => {
 (() => {
   handleNewCoffeeBtn();
   handleSubmitBtn();
+  handleCloseFormBtn();
+  renderCoffeeCards(coffees);
 
   const roastInputs = document.querySelectorAll('input[name="roast"]');
   roastInputs.forEach((roast) => {

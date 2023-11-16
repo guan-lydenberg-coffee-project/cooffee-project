@@ -45,6 +45,7 @@
             </div>
             <h3 class="header-h3">Early Roast Coffee Co.</h3>
           </div>
+
           <div class="col-6 d-flex justify-content-end">
             <nav class="navbar navbar-dark navbar-expand-lg">
               <div class="container-fluid">
@@ -246,16 +247,16 @@
           <div class="col-12">
             <!--                build search bar here-->
             <div
-              class="col-12 d-flex justify-content-center mt-4 gap-3 flex-column text-center"
+              class="col-12 d-flex justify-content-center mt-4 gap-3 flex-column text-center align-items-center"
             >
               <h3>Coffee Menu</h3>
-              <img src="#" alt="" />
+              <img src="./img/coffee-logo.jpeg" alt="coffee-logo" class="search-area-logo"/>
               <p>We're proud to present to you our quality coffee selections</p>
             </div>
             <div class="col-12 d-flex flex-column align-items-center gap-5">
               <div class="search-options d-flex justify-content-center gap-3">
                 <label class="btn-Search">
-                  <input type="radio" name="roast" value="all" />
+                  <input type="radio" name="roast" value="all"/>
                   All
                 </label>
                 <label class="btn-Search">
@@ -305,10 +306,9 @@
       </footer>
 
       <div class="mb-3 coffee-form">
-        <button class="btn closeForm">X</button>
+        <button class="btn closeForm" id="closeFormBtn">X</button>
         <form id="coffee-form">
           <label
-            for=""
             class="form-label d-flex flex-column gap-4 align-items-center"
           >
             <div class="formLogoDiv mb-4">
